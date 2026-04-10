@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DDoS Gateway Stats</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+
+<body>
+    <h1>DDoS Gateway Statistics</h1>
+
+    <div class="card">
+        <p>Total Requests: {{ total_requests }}</p>
+        <p>Blocked Requests: {{ blocked_requests }}</p>
+        <p>Active Blocked IPs: {{ active_attackers }}</p>
+        <p>Total Unique Attackers: {{ total_unique_attackers }}</p>
+    </div>
+
+    <h2>Requests per IP</h2>
+    <ul>
+        {% for ip, count in requests_per_ip.items() %}
+        <li>{{ ip }} : {{ count }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Blocked IPs</h2>
+    <ul>
+        {% for ip in blocked_ips %}
+        <li>{{ ip }}</li>
+        {% endfor %}
+    </ul>
+
+</body>
+
+</html>

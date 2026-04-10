@@ -1,0 +1,15 @@
+ssh -i C:\Users\gpras\key1.pem ubuntu@NEW-EC2-IP  -  ssh -i C:\Users\gpras\key1.pem ubuntu@13.201.43.221
+source ddosenv/bin/activate
+
+cd DDoS/app
+python app.py
+
+
+NEW TERMINAL :
+    ssh -i C:\Users\gpras\key1.pem ubuntu@NEW-EC2-IP
+
+    source ddosenv/bin/activate
+    cd DDoS/gateway
+    python gateway.py
+
+    
